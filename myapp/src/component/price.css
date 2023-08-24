@@ -1,0 +1,113 @@
+/*----------------------------------------Pricing Section------------------------------*/
+.price-category{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: grid;
+    place-items: center;
+    padding: var(--padding);
+}
+.price-category h3{
+    font-size: 30px;
+    margin-bottom: 3rem;
+}
+.pricing-plans{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    min-height: 100vh;
+}
+.pricing-plans .plan{
+    background-color: #242424;
+    padding: 12px 15px;
+    width: 25rem;
+    border-radius: 12px 12px 12px 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0px 13px 4px rgba(0,0,0,0.3);
+
+}
+.plan h2{
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.plan p{
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: #fff;
+    text-align: center;
+}
+.plan ul{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 5px;
+}
+.plan ul li{
+    
+    list-style-type: disc;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.plan:nth-child(1) ul li:nth-child(2n+ 1) {
+    color: #808080;
+    
+}
+.plan:nth-child(2) ul li:nth-child(3n+ 1) {
+    color: #808080;
+    
+}
+.plan:nth-child(3) ul li:nth-child(4n+ 2) {
+    color: #808080;
+    
+}
+.plan:nth-child(4) ul li {
+    color: #fff;
+    
+}
+
+.plan ul li::after{
+    content: ".";
+}
+.plan button{
+    outline: none;
+    border: 0;
+    padding: 9.6px;
+    border-radius: 0 5px 0 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.4s ease-in-out;
+    
+}
+button:hover{
+    transform: scale(1.1);
+}
+.plan:hover button{
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px 0 5px 0;
+}
+
+
+
+
+
+/*------------------Media Quries ---------------------------*/
+@media screen and (max-width:868px) {
+ 
+      
+    /*--------------Pricing Plans-----------*/
+    .pricing-plans{
+        width: 95%;
+        grid-gap: 45px;
+        grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    }
+
+    /*Footer*/
+    
+}

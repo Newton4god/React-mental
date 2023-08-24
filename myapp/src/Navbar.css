@@ -1,0 +1,286 @@
+
+.dash{
+    background:linear-gradient(to right, rgb(17, 15, 15), rgb(37, 33, 33));
+}
+
+.nav{
+   width: 90%;
+   padding: 1.5rem;
+   margin: auto;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    /* background:linear-gradient(to left, black, rgb(27, 20, 20)); */
+    color: white;
+    overflow: hidden;
+   
+}
+
+.nav-lin{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.li{
+    text-decoration: none;
+    color: rgb(248, 241, 241);
+    text-shadow: 2px 2px 5px rgb(8, 8, 8);
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li{
+    list-style: none;
+    
+}
+
+ ul li {
+color: white;
+cursor: pointer;
+position: relative; 
+}
+
+.nav-lin .li li::before {
+    position: absolute;
+    bottom: -0.3rem;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-lin .li li:hover::before {
+    width: 100%;
+}
+
+.nav-lin .li li:hover{
+    color: #fff;
+}
+
+
+.oga{
+    display: none;
+}
+
+.logout{
+    background-color: white;
+    color:black;
+    padding: 0.5rem  2rem;
+    outline: 0;
+    border: 2px solid  grey;
+    border-radius: 8px;
+
+}
+
+.logout1{
+    background-color: white;
+    color:black;
+    padding: 0.5rem  2rem;
+    outline: 0;
+    border: 2px solid  grey;
+    border-radius: 8px;
+
+}
+
+.overo{
+    display: none;
+    gap: 1rem;
+}
+.hey{
+    font-size: 1rem;
+}
+
+.mobile-menu-icon{
+ display: none;
+}
+
+.hey4{
+    display: none;
+}
+.search{
+    padding: 0.5rem 1rem;
+    border: 2px solid grey;
+    border-radius: 1rem;
+    outline: none;
+    width: 17%;
+     z-index: 2;
+}
+
+.dov{
+    z-index: 1000;
+}
+
+
+@media screen and (max-width : 778px) {
+
+    .nav{
+
+        display: flex;
+       justify-content: space-between;
+        align-items: center;
+       width: 100%;
+       margin: auto;
+       overflow: hidden;
+       padding: 1rem 0;
+   
+    }
+    
+    .overo{
+        display: flex;
+    }
+
+ .mobile-menu-icon{
+    display: block;
+   }
+
+  
+
+   .oga{
+    display: block;
+   }
+.dov{
+    color: white;
+    z-index: 100;
+}
+   
+.nav-lin{
+  
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top:-150%;
+    width: 100%;
+    padding-left: 50rem;
+    height: 100vh;
+    background: #111111;
+    padding: 10rem 0 0 10px;
+    transition: 1s ease-in-out 0.1ms;
+    overflow: hidden;
+ }
+
+ .nav-lin.active{
+      z-index: 10;
+     top:0;
+     overflow: hidden;
+ }
+
+ .nav-lin li {
+     font-size: 1rem;
+     margin-left: 2rem;
+     padding-top: 1rem;
+ }
+
+  ul li {
+ color: white;
+ font-size: 20px;
+ padding: 0 20px;
+ margin: 0 10px;
+ text-align: center;
+ cursor: pointer;
+ text-transform: capitalize;
+ position: relative; 
+}
+
+.nav-lin .li li::before {
+    position: absolute;
+    bottom: 0;
+    left: 1.25rem;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-lin .li  li:hover::before {
+    width: 60%;
+}
+
+.nav-lin .li  li:hover{
+    color: #fff;
+}
+
+
+
+
+  .hey{
+    z-index: 1;
+  }
+.hey1{
+    display: block;
+    z-index: 100;
+}
+
+
+.mobile-menu-icon{
+    z-index: 100;
+    font-size: 1.1rem;
+    color: white;
+    margin-right: 2rem;
+}
+
+
+.h1{
+    z-index: 1;
+    color: rgb(250, 249, 249);
+    padding-left: 2rem;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    text-shadow: 5px 4px 10px  black;
+}
+}
+
+
+
+@media screen and (max-width : 470px) {
+
+    .hey4{
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bolder;
+        font-style: italic;
+    }
+    
+    .hey1{
+        display:none;
+        z-index: 1;
+        color: white;
+    }
+}
+
+
+@media screen and (max-width : 300px) {
+
+    .hey4{
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bolder;
+        font-style: italic;
+    }
+    
+    .hey1{
+        display:none;
+        z-index: 1;
+        color: white;
+    }
+
+    
+.h1{
+    z-index: 1;
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+
+}
+
+
+}

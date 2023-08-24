@@ -1,0 +1,162 @@
+.footer{
+    padding: var(--padding);
+    background:linear-gradient(to right, black, rgb(27, 20, 20));
+    margin-top: var(--margin-top);
+}
+.footer-container{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 45% 30% 10%;
+    gap: 5%;
+}
+.footer-title p{
+    color: white;
+    font-size: 17px;
+}
+.lin{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+}
+.lin a {
+    color: white;
+    position: relative;
+    transition: 0.4s ease-in-out;
+}
+
+.lin a::before {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.4s ease-in-out;
+}
+
+.lin a:hover::before {
+    width: 100%;
+}
+
+.lin a:hover{
+    color: #fff;
+}
+
+.footer .socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.socials li{
+    margin-top: 20px;
+    padding-bottom: 12px;
+    border-radius: 12px;
+    transition: transform 0.4s ease-in-out;
+}
+.socials li:hover{
+    transform: scale(1.1);
+}
+.socials li a{
+
+    padding: 0.7rem 0.8rem;
+    transition: 0.4s ease-in-out;
+}
+
+.socials li a:hover{
+    border-radius: 16px 0 16px 0;
+}
+li a {
+    font-size: 19px;
+    color: #e4d7d7;
+}
+
+/*Media Quries*/
+
+
+@media screen and (max-width:798px) {
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    p{
+        font-size: 14px;
+    }
+ 
+    .hamburger{
+        display: block;
+        color: #fff;
+        margin: 0 auto;
+        position: fixed;
+        right: 0;
+        margin-right: 5px;
+      
+    }
+    .news{
+        display: none;
+    }
+    .bar{
+        position: relative;
+        display: block;
+        background: #808080;
+        width: 22px;
+        height: 3px;
+        margin: 5px 0;  
+        margin-right: 5px;
+       
+    }
+    .nav-brand{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding:  2rem;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: all 0.5s linear;
+        background-color: #242424;   
+    }
+    .nav-item .nav-link a{
+    
+        color: #808080;
+        transition: color 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) linear;
+    }
+    .nav-link{
+        padding: 1rem 0.6rem;
+        margin-top: 12px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 21px 7px rgba(0,0,0,0.3);
+        perspective: 400px;
+    }
+
+
+    .nav-brand.active{
+        transform: translateX(0);
+    }
+    .nav-item{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /*Footer*/
+
+      
+    .footer-container{
+        place-items: start;
+        grid-template-columns: 1fr;
+    }
+    .lin{
+        margin-bottom: 12px;
+    }
+    .socials li {
+        margin-top: 30px;
+    }
+    .footer-title p{
+        margin-bottom: 12px;
+    }
+    
+}

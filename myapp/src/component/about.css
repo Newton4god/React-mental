@@ -1,0 +1,506 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --padding: 6px 18px 5px;
+    --margin-top:90px;
+    --color-red: rgba(200, 92, 34, 0.859);
+}
+
+p{
+    font-size: 19px;
+    letter-spacing: 1.2px;  
+    font-weight: 300; 
+}
+ul{
+    letter-spacing: 1.2px;
+}
+body{
+    min-height: 100vh;
+}
+img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*----------------------------------Header Section ------------------------------*/
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    z-index: 99;
+    background-color: #242424;
+    padding: var(--padding);
+}
+.logo{
+    max-width: 100px;
+    padding: 16px;
+    font-size: 1.2rem;
+}
+.logo a{
+    color: #808080;
+}
+.nav-brand{
+    width: 100%;
+    margin-right: 0.5rem;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    
+}
+.nav-item .nav-link a{
+    color: #808080;
+    transition: color 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) linear;
+}
+.nav-item .nav-link a:hover{
+    color:#fff;
+}
+.news{
+    background: #fff;
+    margin-right: 5px;
+    padding: 0.7rem 0.5rem;
+    border-radius: 1rem;
+}
+.news a{
+    text-decoration: none;
+    color: #242424;  
+}
+.hamburger{
+    display: none;
+}
+
+
+/*--------------------------------------About Scetion------------------------------*/
+.about{
+    /* margin-top: var(--margin-top); */
+    padding: var(--padding);
+}
+.about-header{
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 13px;
+}
+.about-us{
+    margin-top: 39px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
+.about-us .us{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.us > h2{
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+.us > h2::after{
+    margin-left: 4px;
+    content: ":";
+}
+.us p{
+    margin-top: 17px;
+    font-size: 17px;
+    margin-bottom: 13px;
+    
+}
+
+.us{
+    text-align: center;
+}
+.head-img{
+    width: 100%;
+    height: 100%;
+    padding-left: 12px;
+    margin-left: 29px;
+  
+}
+.head-img img{
+    width: 85%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.head-img h3{
+    text-align: center;
+    color: var(--color-red);
+}
+
+/*--------------------------------------Mission Scetion------------------------------*/
+.mission-container{
+    margin-top: var(--margin-top);
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(4, 4, 88);
+    color: white;
+}
+.mission-container .us > h2{
+    font-size: 23px;
+    margin-bottom: 14px;
+
+}
+.mission-content p{
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 12px;
+   
+}
+.mission-content p span{
+    margin-top: 5px;
+    display: block;
+
+}
+.mission-content p span::after{
+    content: ".";
+  
+   
+}
+
+/*--------------------------------------Offer Scetion------------------------------*/
+.offer{
+    margin-top: var(--margin-top);
+    padding: var(--padding);
+}
+.offer h2{
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+.offer-content{
+    display: grid;
+    gap: 17.6px;
+    padding: var(--padding);
+    grid-template-columns: repeat(2,1fr);
+}
+.offers{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+}
+.offers p{
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+.offers ul li{
+    margin-bottom: 12px;
+    list-style: disc;
+}
+
+/*--------------------------------------Team Scetion------------------------------*/
+.team{
+    margin-top: var(--margin-top);
+    padding: var(--padding);
+
+}
+.team-container{
+   display: flex;
+   gap: 15px;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+}
+.team-top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.team-top h2{
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+.team-top p{
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+.team-members{
+    margin-top: 40px;
+    margin-bottom: 12px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+.team-members .box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 5px 5px;
+    padding-bottom: 12px;
+    box-shadow: 4px -4px 12px rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+}
+.box img{
+    width: 95%;
+}
+.box h3{
+    font-size: 23px;
+    color: var(--color-red);
+    margin-bottom: 12px;
+}
+.box h5{
+    font-size: 19px;
+    margin-top: 12px;
+}
+
+/*--------------------------------------Why us Scetion------------------------------*/
+.why-us{
+    margin-top: var(--margin-top);
+    padding: var(--padding);    
+}
+.why-us-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+}
+.why-us-container .left{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5px 5px;
+    padding-bottom: 12px;
+    gap: 12px;
+}
+.left h2{
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+.left p{
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+.left ul li{
+    list-style-type: disc;
+    margin-bottom: 12px;
+}
+
+/*-------------------------Testimional Section-------------------------*/
+.slider-container {
+    max-width: 600px;
+    margin: 150px auto;
+    text-align: center;
+    position: relative;
+  
+}
+.slider-container h5{
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+  
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+  
+.testimonial-slide {
+    position: relative;
+    display: none;
+    padding: 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    background-color: #242424;
+    border-radius: 8px;
+    color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    
+    
+}
+.testimonial-slide .image-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.testimonial-slide img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  
+}
+  
+.testimonial-slide.active-slide {
+    display: block;
+}
+  
+.slider-navigation {
+    margin-top: 20px;
+   
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #242424;
+    color: #808080;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    margin: 0 10px;
+}
+.slider-navigation button:hover{
+    color: #fff;
+}  
+button:focus {
+    outline: none;
+}
+  
+
+
+/*--------------------------------------Footer Scetion------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*------------------Media Quries ---------------------------*/
+@media  screen and (max-width:1024px) {
+ 
+    /*Why us Section*/
+       .why-us-container{
+        flex-direction: column;
+        gap: 19px;
+    }
+      /*Footer*/
+         
+
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    p{
+        font-size: 14px;
+    }
+ 
+    .hamburger{
+        display: block;
+        color: #fff;
+        margin: 0 auto;
+        position: fixed;
+        right: 0;
+        margin-right: 5px;
+      
+    }
+    .news{
+        display: none;
+    }
+    .bar{
+        position: relative;
+        display: block;
+        background: #808080;
+        width: 22px;
+        height: 3px;
+        margin: 5px 0;  
+        margin-right: 5px;
+       
+    }
+    .nav-brand{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding:  2rem;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: all 0.5s linear;
+        background-color: #242424;   
+    }
+    .nav-item .nav-link a{
+    
+        color: #808080;
+        transition: color 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) linear;
+    }
+    .nav-link{
+        padding: 1rem 0.6rem;
+        margin-top: 12px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 21px 7px;
+    }
+  
+
+    .nav-brand.active{
+        transform: translateX(0);
+    }
+    .nav-item{
+        flex-direction: column;
+        gap: 12px;
+    }
+  
+    /*About Us*/
+    .about-header{
+        margin-top: 70px;
+    }
+    .about-us{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column-reverse;
+    }
+    .about-us .us{
+        margin-top: 25px;
+        
+    }
+    /*Offer Section*/
+    .offer-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    /*Why us Section*/
+    .why-us-container{
+        flex-direction: column;
+        gap: 19px;
+    }
+
+  
+    
+
+    .slider-container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .testimonial-slide {
+      max-width: 100%;
+    }
+  
+    .testimonial-slide img {
+      width: 80px;
+      height: 80px;
+    }
+  }
